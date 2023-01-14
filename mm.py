@@ -2,7 +2,7 @@ import asyncio
 import re
 from aiogram import Bot, Dispatcher, types
 
-bot = Bot(token="1362818951:AAEX6xNLeAK5N9Eah_lCme4q77pAMkUJSYA")
+bot = Bot(token="5803537321:AAFr8GvhFHaNEmaI-4At84DA_MZwyUHrwyg")
 dp = Dispatcher(bot)
 
 def getPhone(phone):
@@ -21,7 +21,7 @@ async def phoneConverter(msg: types.Message):
     try:
         await bot.send_message(msg.from_user.id, getPhone(msg.text))
     except:
-        await bot.send_message(msg.from_user.id, "Incorrect phone format")
+        await bot.send_message(msg.from_user.id, "Это не номер телефона")
 
 
 async def main():
